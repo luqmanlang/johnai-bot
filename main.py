@@ -17,3 +17,11 @@ def send_message():
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
+@app.route('/')
+def send_message():
+    url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
+    payload = {"chat_id": CHAT_ID, "text": "✅ Bot JohnAI sudah aktif di Render!"}
+    print("Sending to Telegram:", payload)  # Tambah log ini
+    response = requests.post(url, data=payload)
+    print("Response:", response.text)       # Tambah log ini
+    return "Message sent to Telegram!"
