@@ -41,5 +41,3 @@ bot = commands.Bot(command_prefix=BOT_PREFIX, intents=intents)
 Jalankan bot
 
 bot.run(DISCORD_TOKEN)
-
-
