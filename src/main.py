@@ -4,7 +4,7 @@ from discord.ext import commands, tasks
 from dotenv import load_dotenv
 import requests
 from config import DISCORD_TOKEN, CHANNEL_ID, CMC_BASE_URL, HEADERS
-from commands.ping import ping
+from src.commands.ping import ping
 from src.commands.price import price
 
 load_dotenv()
